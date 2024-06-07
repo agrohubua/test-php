@@ -7,13 +7,10 @@ use Security\TwoFactorAuthServiceInterface;
 
 class UserController
 {
-    readonly private TwoFactorAuthServiceInterface $twoFactorAuthService;
-    readonly private SecurityContextInterface $securityContext;
-
-    public function __construct(TwoFactorAuthServiceInterface $twoFactorAuthService, SecurityContextInterface $securityContext)
-    {
-        $this->twoFactorAuthService = $twoFactorAuthService;
-        $this->securityContext = $securityContext;
+    public function __construct(
+        readonly private TwoFactorAuthServiceInterface $twoFactorAuthService,
+        readonly private SecurityContextInterface $securityContext
+    ){
     }
 
     public function authAction(string $username, string $password): string
