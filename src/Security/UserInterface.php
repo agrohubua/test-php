@@ -8,5 +8,6 @@ use Security\Enum\TwoFaTypeEnum;
 
 interface UserInterface
 {
+    public function getPhone(): string;
     public function get2FaType(): TwoFaTypeEnum;
 }
