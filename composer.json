@@ -1,0 +1,7 @@
+{
+    "require": {
+        "php": ">=8.3",
+        "developingw/turbosmsua": "^2.0",
+        "twilio/sdk": "^8.1"
+    }
+}
